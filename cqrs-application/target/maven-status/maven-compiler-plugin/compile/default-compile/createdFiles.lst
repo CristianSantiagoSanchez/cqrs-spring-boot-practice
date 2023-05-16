@@ -1,0 +1,16 @@
+es\plexus\usecase\book\DeleteBookForUserByIdUseCase.class
+es\plexus\usecase\user\FindAllUsersUseCase.class
+es\plexus\usecase\book\UpdateBookForUserByIdUseCase.class
+es\plexus\usecase\swap\SaveSwapUseCase.class
+es\plexus\usecase\book\GetBookForUserByIdUseCase.class
+es\plexus\usecase\book\SaveBookUseCase.class
+es\plexus\usecase\user\FindByFilterUseCase.class
+es\plexus\usecase\user\DeleteUserByIdUseCase.class
+es\plexus\usecase\user\FindUserByIdUseCase.class
+es\plexus\usecase\swap\GetSwapForUserByIdUseCase.class
+es\plexus\usecase\swap\PatchSwapForUserByUserTargetIdUseCase.class
+es\plexus\usecase\book\GetAllBooksForUserUseCase.class
+es\plexus\usecase\user\CreateUserUseCase.class
+es\plexus\usecase\book\GetFilterBooksUseCase.class
+es\plexus\usecase\user\UpdateUserByIdUseCase.class
+es\plexus\usecase\swap\GetAllSwapsForUserUseCase.class

@@ -1,0 +1,16 @@
+C:\Users\rodrigo.regadionuñez\Desktop\book-swap-hub\book-swap-application\src\main\java\es\plexus\usecase\book\GetFilterBooksUseCase.java
+C:\Users\rodrigo.regadionuñez\Desktop\book-swap-hub\book-swap-application\src\main\java\es\plexus\usecase\user\FindByFilterUseCase.java
+C:\Users\rodrigo.regadionuñez\Desktop\book-swap-hub\book-swap-application\src\main\java\es\plexus\usecase\user\FindUserByIdUseCase.java
+C:\Users\rodrigo.regadionuñez\Desktop\book-swap-hub\book-swap-application\src\main\java\es\plexus\usecase\swap\SaveSwapUseCase.java
+C:\Users\rodrigo.regadionuñez\Desktop\book-swap-hub\book-swap-application\src\main\java\es\plexus\usecase\book\GetBookForUserByIdUseCase.java
+C:\Users\rodrigo.regadionuñez\Desktop\book-swap-hub\book-swap-application\src\main\java\es\plexus\usecase\user\UpdateUserByIdUseCase.java
+C:\Users\rodrigo.regadionuñez\Desktop\book-swap-hub\book-swap-application\src\main\java\es\plexus\usecase\book\SaveBookUseCase.java
+C:\Users\rodrigo.regadionuñez\Desktop\book-swap-hub\book-swap-application\src\main\java\es\plexus\usecase\swap\PatchSwapForUserByUserTargetIdUseCase.java
+C:\Users\rodrigo.regadionuñez\Desktop\book-swap-hub\book-swap-application\src\main\java\es\plexus\usecase\user\CreateUserUseCase.java
+C:\Users\rodrigo.regadionuñez\Desktop\book-swap-hub\book-swap-application\src\main\java\es\plexus\usecase\book\DeleteBookForUserByIdUseCase.java
+C:\Users\rodrigo.regadionuñez\Desktop\book-swap-hub\book-swap-application\src\main\java\es\plexus\usecase\swap\GetSwapForUserByIdUseCase.java
+C:\Users\rodrigo.regadionuñez\Desktop\book-swap-hub\book-swap-application\src\main\java\es\plexus\usecase\user\FindAllUsersUseCase.java
+C:\Users\rodrigo.regadionuñez\Desktop\book-swap-hub\book-swap-application\src\main\java\es\plexus\usecase\book\UpdateBookForUserByIdUseCase.java
+C:\Users\rodrigo.regadionuñez\Desktop\book-swap-hub\book-swap-application\src\main\java\es\plexus\usecase\user\DeleteUserByIdUseCase.java
+C:\Users\rodrigo.regadionuñez\Desktop\book-swap-hub\book-swap-application\src\main\java\es\plexus\usecase\book\GetAllBooksForUserUseCase.java
+C:\Users\rodrigo.regadionuñez\Desktop\book-swap-hub\book-swap-application\src\main\java\es\plexus\usecase\swap\GetAllSwapsForUserUseCase.java
