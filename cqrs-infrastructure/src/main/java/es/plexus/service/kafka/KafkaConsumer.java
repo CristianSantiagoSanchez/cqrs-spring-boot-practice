@@ -1,21 +1,12 @@
 package es.plexus.service.kafka;
 
-import com.fasterxml.jackson.core.JsonProcessingException;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
-import es.plexus.entity.event.SwapPatchedEvent;
-import es.plexus.entity.event.SwapRegisterEvent;
-import es.plexus.entity.swap.Swap;
-import es.plexus.service.email.EmailSender;
 import lombok.extern.slf4j.Slf4j;
-import org.apache.kafka.clients.consumer.ConsumerRecord;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Component;
 
 @Component
 @Slf4j
 public class KafkaConsumer {
+/*
 
     @Autowired
     private EmailSender emailSender;
@@ -42,4 +33,5 @@ public class KafkaConsumer {
 
         this.emailSender.sendNotification("Your swap has been " + swapUpdated.getSwapState() +" 🎈", swapUpdated.getUserOrigin().getEmail(),swapUpdated);
     }
+*/
 }

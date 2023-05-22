@@ -1,9 +1,5 @@
 package es.plexus.exception;
 
-import es.plexus.exceptions.book.BookNotFoundException;
-import es.plexus.exceptions.book.IsbnUsedException;
-import es.plexus.exceptions.swap.SwapNotFoundException;
-import es.plexus.exceptions.swap.SwapStateIllegalException;
 import es.plexus.exceptions.user.EmailUsedException;
 import es.plexus.exceptions.user.TokenException;
 import es.plexus.exceptions.user.UserNotFoundException;
@@ -26,12 +22,12 @@ public class RestApiExceptionHandler extends ResponseEntityExceptionHandler {
         System.out.println("entra aqui");
         return new ResponseEntity(ex.getMessage(), HttpStatus.BAD_REQUEST);
     }
-    @ExceptionHandler({UserNotFoundException.class, BookNotFoundException.class, SwapNotFoundException.class})
+    @ExceptionHandler({UserNotFoundException.class})
     public final ResponseEntity handleNotFoundException(Exception ex, WebRequest request) throws Exception {
         return new ResponseEntity(ex.getMessage(), HttpStatus.NOT_FOUND);
     }
 
-    @ExceptionHandler({EmailUsedException.class, UsernameUsedException.class, IsbnUsedException.class, SwapStateIllegalException.class})
+    @ExceptionHandler({EmailUsedException.class, UsernameUsedException.class})
     public final ResponseEntity handleRepeatedException(Exception ex, WebRequest request) throws Exception {
         return new ResponseEntity(ex.getMessage(), HttpStatus.CONFLICT);
     }

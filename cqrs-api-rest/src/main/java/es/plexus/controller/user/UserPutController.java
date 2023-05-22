@@ -2,6 +2,7 @@ package es.plexus.controller.user;
 
 import es.plexus.config.security.TokenUtils;
 import es.plexus.dto.user.UserPostDto;
+import es.plexus.mapper.user.RestUserPostMapper;
 import es.plexus.usecase.user.UpdateUserByIdUseCase;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;

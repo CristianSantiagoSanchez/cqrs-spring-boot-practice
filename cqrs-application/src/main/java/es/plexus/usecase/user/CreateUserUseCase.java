@@ -1,13 +1,11 @@
 package es.plexus.usecase.user;
 
-import es.plexus.entity.event.SwapPatchedEvent;
 import es.plexus.entity.user.User;
 import es.plexus.entity.user.UserRol;
 import es.plexus.exceptions.user.EmailUsedException;
 import es.plexus.exceptions.user.UsernameUsedException;
 import es.plexus.repository.user.UserRepository;
 import es.plexus.repository.user.UserRolRepository;
-import es.plexus.service.event.EventPublisher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
