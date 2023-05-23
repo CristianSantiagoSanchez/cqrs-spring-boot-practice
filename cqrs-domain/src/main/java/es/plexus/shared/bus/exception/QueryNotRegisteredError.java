@@ -1,6 +1,6 @@
-package es.plexus.shared.exception;
+package es.plexus.shared.bus.exception;
 
-import es.plexus.shared.query.Query;
+import es.plexus.shared.bus.query.Query;
 
 public final class QueryNotRegisteredError extends Exception {
     public QueryNotRegisteredError(Class<? extends Query> query) {

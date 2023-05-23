@@ -1,4 +1,4 @@
-package es.plexus.shared.exception;
+package es.plexus.shared.bus.exception;
 
 public final class QueryHandlerExecutionError extends RuntimeException {
     public QueryHandlerExecutionError(Throwable cause) {

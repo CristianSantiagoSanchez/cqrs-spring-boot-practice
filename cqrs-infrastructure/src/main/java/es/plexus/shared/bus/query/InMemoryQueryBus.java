@@ -1,10 +1,6 @@
 package es.plexus.shared.bus.query;
 
-import es.plexus.shared.exception.QueryHandlerExecutionError;
-import es.plexus.shared.query.Query;
-import es.plexus.shared.query.QueryBus;
-import es.plexus.shared.query.QueryHandler;
-import es.plexus.shared.query.Response;
+import es.plexus.shared.bus.exception.QueryHandlerExecutionError;
 import org.springframework.context.ApplicationContext;
 import org.springframework.stereotype.Service;
 

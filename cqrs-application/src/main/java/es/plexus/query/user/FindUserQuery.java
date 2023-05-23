@@ -1,6 +1,6 @@
 package es.plexus.query.user;
 
-import es.plexus.shared.query.Query;
+import es.plexus.shared.bus.query.Query;
 
 public class FindUserQuery implements Query {
     private final long id;

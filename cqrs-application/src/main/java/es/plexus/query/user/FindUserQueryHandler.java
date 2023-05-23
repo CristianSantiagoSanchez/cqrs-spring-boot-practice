@@ -1,6 +1,6 @@
 package es.plexus.query.user;
 
-import es.plexus.shared.query.QueryHandler;
+import es.plexus.shared.bus.query.QueryHandler;
 import es.plexus.usecase.user.FindUserByIdUseCase;
 import org.springframework.stereotype.Service;
 
