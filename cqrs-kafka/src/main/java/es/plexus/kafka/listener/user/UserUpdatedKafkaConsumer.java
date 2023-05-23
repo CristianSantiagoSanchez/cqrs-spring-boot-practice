@@ -1,4 +1,4 @@
-package es.plexus.service.kafka;
+package es.plexus.kafka.listener.user;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
@@ -6,6 +6,7 @@ import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import es.plexus.entity.event.UserUpdatedEvent;
 import es.plexus.entity.user.User;
 import es.plexus.repository.user.query.UserQueryRepository;
+import es.plexus.usecase.user.proyections.UpdateUserByIdProyection;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,7 +17,7 @@ import org.springframework.stereotype.Component;
 @Slf4j
 public class UserUpdatedKafkaConsumer {
     @Autowired
-    UserQueryRepository userQueryRepository;
+    UpdateUserByIdProyection updateUserByIdProyection;
 
     @KafkaListener(topics = {"user_updated"}, groupId = "user_consumer")
     public void swapRegister(ConsumerRecord<Integer,String> consumerRecord) throws JsonProcessingException {
@@ -27,6 +28,6 @@ public class UserUpdatedKafkaConsumer {
         UserUpdatedEvent userUpdatedEvent = mapper.readValue(consumerRecord.value(), UserUpdatedEvent.class);
         User userUpdated = userUpdatedEvent.getUser();
 
-        userQueryRepository.updateUser(userUpdated);
+        updateUserByIdProyection.updateUserById(userUpdated, userUpdated.getId());
     }
 }
