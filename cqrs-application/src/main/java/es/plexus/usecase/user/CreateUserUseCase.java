@@ -4,8 +4,8 @@ import es.plexus.entity.user.User;
 import es.plexus.entity.user.UserRol;
 import es.plexus.exceptions.user.EmailUsedException;
 import es.plexus.exceptions.user.UsernameUsedException;
-import es.plexus.repository.user.UserRepository;
-import es.plexus.repository.user.UserRolRepository;
+import es.plexus.repository.user.UserCommandRepository;
+import es.plexus.repository.user.UserRolCommandRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -15,9 +15,9 @@ import java.time.LocalDate;
 @Service
 public class CreateUserUseCase {
     @Autowired
-    private UserRepository userRepository;
+    private UserCommandRepository userRepository;
     @Autowired
-    private UserRolRepository userRolRepository;
+    private UserRolCommandRepository userRolRepository;
 
     public User saveUser(User userRequest) {
         User existingUsername = userRepository.findOneByUsername(userRequest.getUsername());

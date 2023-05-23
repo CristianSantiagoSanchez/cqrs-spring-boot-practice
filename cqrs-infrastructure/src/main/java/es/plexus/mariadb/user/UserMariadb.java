@@ -1,4 +1,4 @@
-package es.plexus.jpa.user;
+package es.plexus.mariadb.user;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -11,7 +11,7 @@ import java.time.LocalDate;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class UserJpa {
+public class UserMariadb {
 
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Id
@@ -42,5 +42,5 @@ public class UserJpa {
     private String description;
     @ManyToOne
     @JoinColumn(name = "user_rol_id")
-    private UserRolJpa userRol;
+    private UserRolMariadb userRol;
 }

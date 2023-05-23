@@ -1,8 +1,9 @@
-package es.plexus.repository.user;
+package es.plexus.mariadb.repository.user;
 
 import es.plexus.entity.user.User;
-import es.plexus.jpa.user.UserJpa;
+import es.plexus.mariadb.user.UserMariadb;
 import es.plexus.mapper.user.UserMapper;
+import es.plexus.repository.user.UserCommandRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Repository;
@@ -11,11 +12,11 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public class UserRepositoryImpl implements UserRepository<Long> {
+public class UserRepositoryMariadbImpl implements UserCommandRepository<Long> {
     @Autowired
     private UserMapper mapper;
     @Autowired
-    private UserJpaRepository userRepository;
+    private UserMariadbRepository userRepository;
 
     @Override
     public List<User> findAll() {
@@ -24,7 +25,7 @@ public class UserRepositoryImpl implements UserRepository<Long> {
 
     @Override
     public List<User> findFilterUser(String username) {
-        Specification<UserJpa> spec = Specification.where(null);
+        Specification<UserMariadb> spec = Specification.where(null);
         if (username != null) {
             spec = spec.and((root, query, criteriaBuilder) -> criteriaBuilder.like(root.get("username"), "%" + username + "%"));
         }
@@ -33,7 +34,7 @@ public class UserRepositoryImpl implements UserRepository<Long> {
 
     @Override
     public User findById(Long userId) {
-        Optional<UserJpa> user = userRepository.findById(userId);
+        Optional<UserMariadb> user = userRepository.findById(userId);
         if (user.isEmpty()) {
             return null;
         }
@@ -42,7 +43,7 @@ public class UserRepositoryImpl implements UserRepository<Long> {
 
     @Override
     public User findByEmail(String email) {
-        Optional<UserJpa> user = userRepository.findByEmail(email);
+        Optional<UserMariadb> user = userRepository.findByEmail(email);
         if (user.isEmpty()) {
             return null;
         }
@@ -51,7 +52,7 @@ public class UserRepositoryImpl implements UserRepository<Long> {
 
     @Override
     public List<User> findByUsername(String username) {
-        List<UserJpa> user = userRepository.findByUsername(username);
+        List<UserMariadb> user = userRepository.findByUsername(username);
         if (user.isEmpty()) {
             return null;
         }
@@ -60,7 +61,7 @@ public class UserRepositoryImpl implements UserRepository<Long> {
 
     @Override
     public User findOneByUsername(String username) {
-        Optional<UserJpa> user = userRepository.findOneByUsername(username);
+        Optional<UserMariadb> user = userRepository.findOneByUsername(username);
         if (user.isEmpty()) {
             return null;
         }
@@ -69,7 +70,7 @@ public class UserRepositoryImpl implements UserRepository<Long> {
 
     @Override
     public User findByUsernameAndPassword(String username, String password) {
-        Optional<UserJpa> user = userRepository.findByUsernameAndPassword(username, password);
+        Optional<UserMariadb> user = userRepository.findByUsernameAndPassword(username, password);
         if (user.isEmpty()) {
             return null;
         }

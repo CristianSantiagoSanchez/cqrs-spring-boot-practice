@@ -4,14 +4,14 @@ import es.plexus.entity.user.User;
 import es.plexus.exceptions.user.UserNotFoundException;
 import es.plexus.mapper.user.UserResponseMapper;
 import es.plexus.query.user.UserResponse;
-import es.plexus.repository.user.UserRepository;
+import es.plexus.repository.user.UserCommandRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
 public class FindUserByIdUseCase {
     @Autowired
-    private UserRepository userRepository;
+    private UserCommandRepository userRepository;
     @Autowired
     private UserResponseMapper userResponseMapper;
 

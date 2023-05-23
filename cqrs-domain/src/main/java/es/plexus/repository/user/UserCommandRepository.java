@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface UserRepository<L>{
+public interface UserCommandRepository<L>{
     public List<User> findAll();
     public List<User> findFilterUser(String username);
     public User findByEmail(String email);

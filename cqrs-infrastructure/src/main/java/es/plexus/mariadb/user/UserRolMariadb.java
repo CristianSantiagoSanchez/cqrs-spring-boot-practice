@@ -1,4 +1,4 @@
-package es.plexus.jpa.user;
+package es.plexus.mariadb.user;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class UserRolJpa {
+public class UserRolMariadb {
     @Id
     private long id;
     @Column(nullable = false, unique = true)

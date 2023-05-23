@@ -1,17 +1,18 @@
-package es.plexus.repository.user;
+package es.plexus.mariadb.repository.user;
 
 import es.plexus.entity.user.UserRol;
-import es.plexus.jpa.user.UserRolJpa;
+import es.plexus.mariadb.user.UserRolMariadb;
 import es.plexus.mapper.user.UserRolMapper;
+import es.plexus.repository.user.UserRolCommandRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 import java.util.Optional;
 
 @Repository
-public class UserRolRepositoryImpl implements UserRolRepository{
+public class UserRolRepositoryMariadbImpl implements UserRolCommandRepository {
     @Autowired
-    private UserRolJpaRepository userRolJpaRepository;
+    private UserRolMariadbRepository userRolJpaRepository;
     @Autowired
     private UserRolMapper userRolMapper;
     @Override
@@ -21,7 +22,7 @@ public class UserRolRepositoryImpl implements UserRolRepository{
 
     @Override
     public UserRol findOneByName(String name) {
-        Optional<UserRolJpa> user = userRolJpaRepository.findOneByName(name);
+        Optional<UserRolMariadb> user = userRolJpaRepository.findOneByName(name);
         if (user.isEmpty()) {
             return null;
         }
@@ -30,7 +31,7 @@ public class UserRolRepositoryImpl implements UserRolRepository{
 
     @Override
     public UserRol findOneById(long id) {
-        Optional<UserRolJpa> user = userRolJpaRepository.findOneById(id);
+        Optional<UserRolMariadb> user = userRolJpaRepository.findOneById(id);
         if (user.isEmpty()) {
             return null;
         }
