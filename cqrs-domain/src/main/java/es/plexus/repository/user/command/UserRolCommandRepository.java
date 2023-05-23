@@ -1,4 +1,4 @@
-package es.plexus.repository.user;
+package es.plexus.repository.user.command;
 
 import es.plexus.entity.user.UserRol;
 import org.springframework.stereotype.Repository;

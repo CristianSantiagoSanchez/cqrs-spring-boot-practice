@@ -2,8 +2,8 @@ package es.plexus.mariadb.initializer;
 
 import es.plexus.entity.user.User;
 import es.plexus.entity.user.UserRol;
-import es.plexus.repository.user.UserCommandRepository;
-import es.plexus.repository.user.UserRolCommandRepository;
+import es.plexus.repository.user.command.UserCommandRepository;
+import es.plexus.repository.user.command.UserRolCommandRepository;
 import jakarta.annotation.PostConstruct;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.annotation.Order;
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 
 import java.time.LocalDate;
 @Component
-public class DbInitializer {
+public class DbMariaInitializer {
     @Autowired
     private UserCommandRepository userRepository;
     @Autowired

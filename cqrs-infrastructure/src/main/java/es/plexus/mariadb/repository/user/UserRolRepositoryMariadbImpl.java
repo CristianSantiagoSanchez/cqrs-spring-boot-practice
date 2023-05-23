@@ -2,8 +2,8 @@ package es.plexus.mariadb.repository.user;
 
 import es.plexus.entity.user.UserRol;
 import es.plexus.mariadb.user.UserRolMariadb;
-import es.plexus.mapper.user.UserRolMapper;
-import es.plexus.repository.user.UserRolCommandRepository;
+import es.plexus.mariadb.mapper.user.UserRolMapper;
+import es.plexus.repository.user.command.UserRolCommandRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 

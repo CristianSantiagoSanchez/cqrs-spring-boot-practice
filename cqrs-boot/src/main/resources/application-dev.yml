@@ -4,6 +4,14 @@ spring:
     username: root
     password: plexus
     driver-class-name: org.mariadb.jdbc.Driver
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: book_swap_mongo
+      username: root
+      password: password
+      authentication-database: admin
   jpa:
     hibernate:
       ddl-auto: update

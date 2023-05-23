@@ -1,4 +1,4 @@
-package es.plexus.repository.user;
+package es.plexus.repository.user.query;
 
 import es.plexus.entity.user.User;
 import org.springframework.stereotype.Repository;
@@ -6,9 +6,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface UserCommandRepository<L>{
+public interface UserQueryRepository<L>{
     public List<User> findAll();
-    public List<User> findFilterUser(String username);
     public User findByEmail(String email);
     public User findOneByUsername(String username);
     public List<User> findByUsername(String username);

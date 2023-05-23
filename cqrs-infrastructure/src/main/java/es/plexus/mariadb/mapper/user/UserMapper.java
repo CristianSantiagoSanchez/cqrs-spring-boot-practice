@@ -1,4 +1,4 @@
-package es.plexus.mapper.user;
+package es.plexus.mariadb.mapper.user;
 
 import es.plexus.entity.user.User;
 import es.plexus.mariadb.user.UserMariadb;

@@ -1,8 +1,9 @@
 version: '3.9'
 volumes:
-  data:
+  data-write:
+  data-read:
 services:
-  db:
+  db-write:
     image: mariadb
     environment:
       MYSQL_ROOT_PASSWORD: plexus
@@ -10,9 +11,33 @@ services:
       MYSQL_USER: plexus
       MYSQL_PASSWORD: plexus
     volumes:
-      - data:/var/lib/mysql
+      - data-write:/var/lib/mysql
     ports:
       - "3306:3306"
+  db-read:
+    image: mongo:5.0
+    container_name: mongo
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=password
+      - MONGO_INITDB_DATABASE=book_swap_mongo
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - data-read:/data/db
+  mongo-express:
+    image: mongo-express
+    container_name: mexpress
+    environment:
+      - ME_CONFIG_MONGODB_ADMINUSERNAME=root
+      - ME_CONFIG_MONGODB_ADMINPASSWORD=password
+      - ME_CONFIG_MONGODB_URL=mongodb://root:password@mongo:27017/?authSource=admin
+    links:
+      - db-read
+    restart: unless-stopped
+    ports:
+      - "8081:8081"
   book_swap:
     image: target-image:latest
     ports:

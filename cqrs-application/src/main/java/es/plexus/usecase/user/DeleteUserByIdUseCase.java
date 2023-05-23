@@ -2,7 +2,7 @@ package es.plexus.usecase.user;
 
 import es.plexus.entity.user.User;
 import es.plexus.exceptions.user.UserNotFoundException;
-import es.plexus.repository.user.UserCommandRepository;
+import es.plexus.repository.user.command.UserCommandRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

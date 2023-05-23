@@ -1,7 +1,7 @@
 package es.plexus.config.security;
 
 import es.plexus.entity.user.User;
-import es.plexus.repository.user.UserCommandRepository;
+import es.plexus.repository.user.command.UserCommandRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
