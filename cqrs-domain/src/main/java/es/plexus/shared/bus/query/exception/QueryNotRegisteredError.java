@@ -1,4 +1,4 @@
-package es.plexus.shared.bus.exception;
+package es.plexus.shared.bus.query.exception;
 
 import es.plexus.shared.bus.query.Query;
 

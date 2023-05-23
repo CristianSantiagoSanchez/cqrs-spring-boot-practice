@@ -10,5 +10,6 @@ import java.util.List;
 @Mapper(componentModel = "spring")
 public interface UserResponseMapper {
     UserResponse entityToUserResponse(User user);
+    User responseToUserEntity(UserResponse userResponse);
     List<UserResponse> entityToLIstUserResponse(List<User> users);
 }

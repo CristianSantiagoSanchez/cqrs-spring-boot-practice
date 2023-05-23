@@ -1,6 +1,6 @@
 package es.plexus.shared.bus.query;
 
-import es.plexus.shared.bus.exception.QueryNotRegisteredError;
+import es.plexus.shared.bus.query.exception.QueryNotRegisteredError;
 import org.reflections.Reflections;
 import org.springframework.stereotype.Service;
 

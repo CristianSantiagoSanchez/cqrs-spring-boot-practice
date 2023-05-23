@@ -1,10 +1,12 @@
 package es.plexus.usecase.user;
 
+import es.plexus.entity.event.UserUpdatedEvent;
 import es.plexus.entity.user.User;
 import es.plexus.exceptions.user.EmailUsedException;
 import es.plexus.exceptions.user.UserNotFoundException;
 import es.plexus.exceptions.user.UsernameUsedException;
 import es.plexus.repository.user.command.UserCommandRepository;
+import es.plexus.service.event.EventPublisher;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,6 +14,8 @@ import org.springframework.stereotype.Service;
 public class UpdateUserByIdUseCase {
     @Autowired
     private UserCommandRepository userRepository;
+    @Autowired
+    private EventPublisher eventPublisher;
 
     public void updateUserById(User userToUpdate, long userId) {
         User userDB = userRepository.findById(userId);
@@ -32,6 +36,7 @@ public class UpdateUserByIdUseCase {
 
         userToUpdate.setSignUpDate(userDB.getSignUpDate());
         userToUpdate.setId(userId);
-        userRepository.updateUser(userToUpdate);
+        User user = userRepository.updateUser(userToUpdate);
+        eventPublisher.publish(new UserUpdatedEvent(user));
     }
 }

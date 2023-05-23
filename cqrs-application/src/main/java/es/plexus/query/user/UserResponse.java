@@ -17,6 +17,7 @@ public final class UserResponse implements Response {
     private String name;
     private String surnames;
     private String email;
+    private String password;
     private LocalDate birthdate;
     private LocalDate signUpDate;
     private String description;
