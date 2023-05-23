@@ -14,6 +14,7 @@ public final class FindUserQueryHandler implements QueryHandler<FindUserQuery, U
 
     @Override
     public UserResponse handle(FindUserQuery query)  {
-        return findUserByIdUseCase.getUserById(query.getId());
+        UserResponse userResponse = findUserByIdUseCase.getUserById(query.getId());
+        return userResponse;
     }
 }

@@ -10,17 +10,11 @@ import org.springframework.kafka.config.TopicBuilder;
 @Profile("dev")
 public class KafkaConfig {
     @Bean
-    public NewTopic swapRegister(){
-        return TopicBuilder.name("swap_register")
+    public NewTopic userUpdated(){
+        return TopicBuilder.name("user_updated")
                 .partitions(3)
                 .replicas(1)
                 .build();
     }
-    @Bean
-    public NewTopic swapPatched(){
-        return TopicBuilder.name("swap_patched")
-                .partitions(3)
-                .replicas(1)
-                .build();
-    }
+
 }

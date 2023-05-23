@@ -20,7 +20,7 @@ public class FindUserByIdUseCase {
         if (userDB == null){
             throw new UserNotFoundException("User not found with id " + userId);
         }
-
+        System.out.println("rertur antes");
         return userResponseMapper.entityToUserResponse(userDB);
     }
 }

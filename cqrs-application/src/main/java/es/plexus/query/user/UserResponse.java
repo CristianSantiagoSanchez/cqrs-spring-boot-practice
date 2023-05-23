@@ -1,5 +1,6 @@
 package es.plexus.query.user;
 
+import es.plexus.entity.user.UserRol;
 import es.plexus.shared.bus.query.Response;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -19,5 +20,6 @@ public final class UserResponse implements Response {
     private LocalDate birthdate;
     private LocalDate signUpDate;
     private String description;
+    private UserRol userRol;
 
 }

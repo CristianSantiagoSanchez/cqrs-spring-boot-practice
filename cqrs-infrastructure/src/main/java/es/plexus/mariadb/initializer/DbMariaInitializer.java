@@ -40,7 +40,6 @@ public class DbMariaInitializer {
         String username1 = "prueba1";
         User userDb1 = userRepository.findOneByUsername(username1);
         if (userDb1 == null){
-            System.out.println("se ejecuta el user");
             User user = new User();
             user.setId(1L);
             user.setName("prueba1");
