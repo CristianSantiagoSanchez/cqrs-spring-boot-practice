@@ -13,6 +13,4 @@ public interface RestUserMapper {
     UserDto toDto(User user);
     List<UserDto> toListDto(List<User> users);
     List<User> toLisEntity(List<UserDto> userDtos);
-
-
 }

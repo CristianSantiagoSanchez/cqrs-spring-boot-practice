@@ -20,6 +20,7 @@
 		<module>cqrs-infrastructure</module>
 		<module>cqrs-boot</module>
 		<module>cqrs-api-rest</module>
+        <module>cqrs-kafka</module>
     </modules>
     <properties>
 		<java.version>17</java.version>
@@ -78,7 +79,12 @@
 			</dependency>
 			<dependency>
 				<groupId>es.plexus</groupId>
-				<artifactId>book-swap-boot</artifactId>
+				<artifactId>cqrs-boot</artifactId>
+				<version>${project.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>es.plexus</groupId>
+				<artifactId>cqrs-kafka</artifactId>
 				<version>${project.version}</version>
 			</dependency>
 

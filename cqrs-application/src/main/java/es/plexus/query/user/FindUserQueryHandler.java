@@ -1,6 +1,6 @@
 package es.plexus.query.user;
 
-import es.plexus.shared.query.QueryHandler;
+import es.plexus.shared.bus.query.QueryHandler;
 import es.plexus.usecase.user.FindUserByIdUseCase;
 import org.springframework.stereotype.Service;
 
@@ -14,6 +14,7 @@ public final class FindUserQueryHandler implements QueryHandler<FindUserQuery, U
 
     @Override
     public UserResponse handle(FindUserQuery query)  {
-        return findUserByIdUseCase.getUserById(query.getId());
+        UserResponse userResponse = findUserByIdUseCase.getUserById(query.getId());
+        return userResponse;
     }
 }

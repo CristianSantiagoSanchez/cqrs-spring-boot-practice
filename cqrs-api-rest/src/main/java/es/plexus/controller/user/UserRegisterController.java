@@ -3,6 +3,7 @@ package es.plexus.controller.user;
 import es.plexus.dto.user.UserPostDto;
 import es.plexus.entity.user.User;
 import es.plexus.mapper.user.RestUserMapper;
+import es.plexus.mapper.user.RestUserPostMapper;
 import es.plexus.usecase.user.CreateUserUseCase;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
